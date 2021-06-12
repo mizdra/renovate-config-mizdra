@@ -7,23 +7,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
-
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+          node-version: '16.x'
 
       - uses: actions/cache@v2
-        id: cache
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.OS }}-yarn-
+          path: ${YARN_CACHE_FOLDER}
+          key: ${{ runner.os }}-yarn-cache-v1
+      - run: yarn install --frozen-lockfile
 
-      - name: yarn install --frozen-lockfile
-        run: yarn install --frozen-lockfile
-
-      - name: yarn run lint
-        run: yarn run lint
+      - run: yarn run lint
+      - run: yarn run renovate-config-validator
