@@ -1,5 +1,5 @@
 {
-  "name": "renovate-config",
+  "name": "renovate-config-mizdra",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/mizdra/renovate-config",
