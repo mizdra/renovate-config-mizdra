@@ -5,7 +5,12 @@
   "repository": "https://github.com/mizdra/renovate-config",
   "author": "mizdra <pp.mizdra@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "prettier --check ."
+  },
+  "prettier": "@mizdra/prettier-config-mizdra",
   "devDependencies": {
+    "@mizdra/prettier-config-mizdra": "^0.3.0",
     "prettier": "2.3.1"
   }
 }
