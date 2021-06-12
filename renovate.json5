@@ -28,4 +28,24 @@
   ],
   // 馴染みがあって、今使われているパッケージのバージョンがひと目で分かる bump 形式 (`^1.0.0` => `^1.1.0`) でバージョンの範囲を書き換える
   rangeStrategy: 'bump',
+  packageRules: [
+    // devDeps であれば CI が通れば安全にマージできるはずなので、major 以下で automerge を有効化する
+    {
+      matchUpdateTypes: ['major', 'minor', 'patch'],
+      matchDepTypes: ['devDependencies'],
+      automerge: true,
+    },
+    // 本番で利用されるものは安全側に倒して minor 以下で automerge を有効化する
+    {
+      matchUpdateTypes: ['minor', 'patch'],
+      matchDepTypes: [
+        'dependencies',
+        'optionalDependencies',
+        'engines',
+        // peerDeps は major 単位で更新するようになっていて、そもそも minor 以下の PR が作られないので除外する
+        // 'peerDependencies',
+      ],
+      automerge: true,
+    },
+  ],
 }
