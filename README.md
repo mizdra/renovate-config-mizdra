@@ -4,7 +4,13 @@ Shareable Renovate Config for @mizdra
 
 ## Usage
 
-WIP
+`renovate.json:`
+
+```json
+{
+  "extends": ["github>mizdra/renovate-config-mizdra"]
+}
+```
 
 ## LICENSE
 
