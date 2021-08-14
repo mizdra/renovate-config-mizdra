@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "config:base",
+    "group:monorepos",
+    "schedule:monthly",
+    ":dependencyDashboard",
+    ":prConcurrentLimit10",
+    ":separateMultipleMajorReleases",
+    ":timezone(Asia/Tokyo)",
+    ":widenPeerDependencies"
+  ],
+  "ignorePresets": [":prConcurrentLimit20"],
+  "labels": ["renovate"],
+  "postUpdateOptions": ["npmDedupe", "yarnDedupeHighest"],
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchDepTypes": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchDepTypes": ["dependencies", "optionalDependencies", "engines"],
+      "automerge": true
+    }
+  ]
+}
