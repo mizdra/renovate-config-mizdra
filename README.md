@@ -22,13 +22,13 @@ Shareable Renovate Config for @mizdra
 ```json
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>mizdra/renovate-config-mizdra", "github>mizdra/renovate-config-mizdra:lib"]
+  "extends": ["github>mizdra/renovate-config-mizdra", "github>mizdra/renovate-config-mizdra:+lib"]
 }
 ```
 
 ## Optional presets
 
-### [`lib.json`](https://github.com/mizdra/renovate-config-mizdra/blob/main/lib.json)
+### [`+lib`](https://github.com/mizdra/renovate-config-mizdra/blob/main/+lib.json)
 
 ライブラリ向けの preset です。`mizdra/renovate-config-mizdra` はデフォルトでアプリケーション向けに設定がカスタマイズされているため、ライブラリで利用する場合はこの preset を継承するようにしてください。
 
