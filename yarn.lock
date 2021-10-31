@@ -1001,6 +1001,11 @@ asn1.js@^5.0.0:
     minimalistic-assert "^1.0.0"
     safer-buffer "^2.1.0"
 
+auth-header@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/auth-header/-/auth-header-1.0.0.tgz#ea24fdc5588e1eb8b750df8655a396aa48fc9076"
+  integrity sha512-CPPazq09YVDUNNVWo4oSPTQmtwIzHusZhQmahCKvIsk0/xH6U3QsMAv3sM+7+Q0B1K2KJ/Q38OND317uXs4NHA==
+
 azure-devops-node-api@11.0.1:
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/azure-devops-node-api/-/azure-devops-node-api-11.0.1.tgz#b7ec4783230e1de8fc972b23effe7ed2ebac17ff"
@@ -3138,10 +3143,10 @@ remark@13.0.0:
     remark-stringify "^9.0.0"
     unified "^9.1.0"
 
-renovate@^27.23.0:
-  version "27.23.0"
-  resolved "https://registry.yarnpkg.com/renovate/-/renovate-27.23.0.tgz#eb823449bbb9e2b7c7b43a63a0fa5d789cc959c3"
-  integrity sha512-EXsUOGBXc4EXoOaoWwjVVzQbjHv2DRHCH+FNB1e0T45SOijOjAjVbCJgR6zMof57uznicLdokVM8d2fUjRFrGg==
+renovate@^27.31.10:
+  version "27.31.10"
+  resolved "https://registry.yarnpkg.com/renovate/-/renovate-27.31.10.tgz#88d0278c71c17adc0c09c1608ceacb2055fc9a1a"
+  integrity sha512-bHZGAZfPCnb06G4blFosM7Fi8m9UtWjynsogwa6f6PXNZLFfPZF9SrME/Cf3BTf99uibZ1rIwExu9oV6p8HOvA==
   dependencies:
     "@aws-sdk/client-ecr" "3.25.0"
     "@breejs/later" "4.0.2"
@@ -3151,6 +3156,7 @@ renovate@^27.23.0:
     "@sindresorhus/is" "4.2.0"
     "@yarnpkg/core" "2.4.0"
     "@yarnpkg/parsers" "2.4.0"
+    auth-header "1.0.0"
     azure-devops-node-api "11.0.1"
     bunyan "1.8.15"
     cacache "15.3.0"
@@ -3207,13 +3213,12 @@ renovate@^27.23.0:
     semver-utils "1.1.4"
     shlex "2.1.0"
     shortid "2.2.16"
-    simple-git "2.45.1"
+    simple-git "2.46.0"
     slugify "1.6.0"
     traverse "0.6.6"
     upath "2.0.1"
     url-join "4.0.1"
     validate-npm-package-name "3.0.0"
-    www-authenticate "0.6.2"
     xmldoc "1.1.2"
   optionalDependencies:
     re2 "1.16.0"
@@ -3395,10 +3400,10 @@ signal-exit@^3.0.0:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-simple-git@2.45.1:
-  version "2.45.1"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-2.45.1.tgz#27d26ae59f734ffd7e1dea16a1ee3b309d68f5ef"
-  integrity sha512-NmEoThiLTJxl26WNtZxtJTue18ReTcSrf3so5vJG/O8KY9uMxH+yAhXV/DElBJyOYZrrBbVsH8JOFxgENdc9Xg==
+simple-git@2.46.0:
+  version "2.46.0"
+  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-2.46.0.tgz#d564856705cee9d2ef1d1f98c7143e2bc00e7c3e"
+  integrity sha512-6eumII1vfP4NpRqxZcVWCcIT5xHH6dRyvBZSjkH4dJRDRpv+0f75hrN5ysp++y23Mfr3AbRC/dO2NDbfj1lJpQ==
   dependencies:
     "@kwsites/file-exists" "^1.1.1"
     "@kwsites/promise-deferred" "^1.1.1"
@@ -3865,11 +3870,6 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
-
-www-authenticate@0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/www-authenticate/-/www-authenticate-0.6.2.tgz#b7a7d487bdc5a8b423a4d8fd5f9c661adde50ebf"
-  integrity sha1-t6fUh73FqLQjpNj9X5xmGt3lDr8=
 
 xmldoc@1.1.2:
   version "1.1.2"
