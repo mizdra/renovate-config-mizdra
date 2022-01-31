@@ -766,10 +766,10 @@
   resolved "https://registry.yarnpkg.com/@kwsites/promise-deferred/-/promise-deferred-1.1.1.tgz#8ace5259254426ccef57f3175bc64ed7095ed919"
   integrity sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==
 
-"@mizdra/prettier-config-mizdra@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@mizdra/prettier-config-mizdra/-/prettier-config-mizdra-0.4.0.tgz#8e23908ad3c04ac1d76472224b907e80ae2076ec"
-  integrity sha512-FtYRmM31VyuLqKxHLWJu0EbOVKvDByHddFMzJz4uSy5LRN2Ht4jHXhfYOMWenJdGIWDExACjwDt3/kIKJojuzA==
+"@mizdra/prettier-config-mizdra@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@mizdra/prettier-config-mizdra/-/prettier-config-mizdra-1.0.0.tgz#59a82a2f653c245d29600cb357ac42a0e8525804"
+  integrity sha512-XukmUe7FrXEGnL1efi1H6oTY/GuCcjt3oA5tblia/kYmTqJ3Ciqz/3WN57liv0TDZC2aKNMQ3f0Bxp0rUEJCXA==
 
 "@node-redis/bloom@^1.0.0":
   version "1.0.1"

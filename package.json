@@ -10,7 +10,7 @@
   },
   "prettier": "@mizdra/prettier-config-mizdra",
   "devDependencies": {
-    "@mizdra/prettier-config-mizdra": "^0.4.0",
+    "@mizdra/prettier-config-mizdra": "^1.0.0",
     "prettier": "2.5.1",
     "renovate": "^31.64.0"
   }
