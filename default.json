@@ -11,7 +11,7 @@
     ":widenPeerDependencies"
   ],
   "ignorePresets": [":prConcurrentLimit20"],
-  "labels": ["renovate"],
+  "labels": ["renovate", "Type: Dependencies"],
   "postUpdateOptions": ["npmDedupe", "yarnDedupeHighest"],
   "rangeStrategy": "bump",
   "packageRules": [
