@@ -11,7 +11,7 @@
   "prettier": "@mizdra/prettier-config-mizdra",
   "devDependencies": {
     "@mizdra/prettier-config-mizdra": "^1.0.0",
-    "prettier": "2.5.1",
+    "prettier": "2.6.1",
     "renovate": "^31.96.0"
   }
 }
