@@ -1,29 +1,52 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:base",
-    "group:monorepos",
-    "schedule:monthly",
-    ":dependencyDashboard",
-    ":prConcurrentLimit10",
-    ":separateMultipleMajorReleases",
-    ":timezone(Asia/Tokyo)",
-    ":widenPeerDependencies"
+  $schema: 'https://docs.renovatebot.com/renovate-schema.json',
+  extends: [
+    'config:base',
+    // monorepo に属する依存関係は CHANGELOG が共有されていたり、同時に更新しないと壊れることが多いので、1 つのグループにまとめる
+    'group:monorepos',
+    // CI の無料枠を消費しすぎないよう、月に 1 回 発火するように
+    'schedule:monthly',
+    // アップデートする依存関係を自分で選べるよう、ダッシュボードを有効化する
+    ':dependencyDashboard',
+    // CI の無料枠を消費しすぎないよう、同時に開く PR の数を 10 以下に制限する
+    ':prConcurrentLimit10',
+    // アップデートの安全性を高めるため、1 つのグループに major / minor が混在したり、major が複数含まれないようにする
+    ':separateMultipleMajorReleases',
+    // `schedule` を JST に
+    ':timezone(Asia/Tokyo)',
+    // peerDeps を更新する時は、バージョンの範囲を広げるようにする。
+    // 例: `"eslint": "^3.0.0"` の peerDeps があるリポジトリで、`eslint@4` が publish されたら、`"eslint": "^4.0.0"` ではなく `"eslint": "^3.0.0 || ^4.0.0"` みたいにする。
+    ':widenPeerDependencies',
   ],
-  "ignorePresets": [":prConcurrentLimit20"],
-  "labels": ["renovate", "Type: Dependencies"],
-  "postUpdateOptions": ["npmDedupe", "yarnDedupeHighest"],
-  "rangeStrategy": "bump",
-  "packageRules": [
+  // `:prConcurrentLimit10` を使いたいため、`:prConcurrentLimit20` は無効化する
+  ignorePresets: [':prConcurrentLimit20'],
+  // renovate の PR を一覧しやすいようラベルを付けておく
+  labels: ['renovate', 'Type: Dependencies'],
+  postUpdateOptions: [
+    // 1つのパッケージが複数バージョン存在すると、予期せぬことが発生しやすいので dedupe する
+    'npmDedupe',
+    'yarnDedupeHighest',
+  ],
+  // 馴染みがあって、今使われているパッケージのバージョンがひと目で分かる bump 形式 (`^1.0.0` => `^1.1.0`) でバージョンの範囲を書き換える
+  rangeStrategy: 'bump',
+  packageRules: [
+    // devDeps であれば CI が通れば安全にマージできるはずなので、major 以下で automerge を有効化する
     {
-      "matchUpdateTypes": ["major", "minor", "patch"],
-      "matchDepTypes": ["devDependencies"],
-      "automerge": true
+      matchUpdateTypes: ['major', 'minor', 'patch'],
+      matchDepTypes: ['devDependencies'],
+      automerge: true,
     },
+    // 本番で利用されるものは安全側に倒して minor 以下で automerge を有効化する
     {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchDepTypes": ["dependencies", "optionalDependencies", "engines"],
-      "automerge": true
-    }
-  ]
+      matchUpdateTypes: ['minor', 'patch'],
+      matchDepTypes: [
+        'dependencies',
+        'optionalDependencies',
+        'engines',
+        // peerDeps は major 単位で更新するようになっていて、そもそも minor 以下の PR が作られないので除外する
+        // 'peerDependencies',
+      ],
+      automerge: true,
+    },
+  ],
 }
