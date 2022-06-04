@@ -7,15 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '18.x'
+          cache: 'pnpm'
 
-      - uses: actions/cache@v3
-        with:
-          path: ${YARN_CACHE_FOLDER}
-          key: ${{ runner.os }}-yarn-cache-v1
-      - run: yarn install --frozen-lockfile
+      - run: pnpm install
 
-      - run: yarn run lint
-      - run: yarn run renovate-config-validator
+      - run: pnpm run lint
+      - run: pnpm exec renovate-config-validator
