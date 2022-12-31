@@ -16,6 +16,6 @@
     "@mizdra/prettier-config-mizdra": "^1.0.0",
     "npm-run-all": "^4.1.5",
     "prettier": "2.8.1",
-    "renovate": "^33.2.4"
+    "renovate": "^34.77.0"
   }
 }
