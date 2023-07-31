@@ -3,13 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@mizdra/prettier-config-mizdra': ^1.0.0
   npm-run-all: ^4.1.5
-  prettier: 2.8.8
+  prettier: 3.0.0
   renovate: ^35.159.7
 
 devDependencies:
-  '@mizdra/prettier-config-mizdra': 1.0.0_prettier@2.8.8
+  '@mizdra/prettier-config-mizdra': 1.0.0_prettier@3.0.0
   npm-run-all: 4.1.5
-  prettier: 2.8.8
+  prettier: 3.0.0
   renovate: 35.159.7
 
 packages:
@@ -1278,12 +1278,12 @@ packages:
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
     dev: true
 
-  /@mizdra/prettier-config-mizdra/1.0.0_prettier@2.8.8:
+  /@mizdra/prettier-config-mizdra/1.0.0_prettier@3.0.0:
     resolution: {integrity: sha512-XukmUe7FrXEGnL1efi1H6oTY/GuCcjt3oA5tblia/kYmTqJ3Ciqz/3WN57liv0TDZC2aKNMQ3f0Bxp0rUEJCXA==}
     peerDependencies:
       prettier: '>=2.4.0'
     dependencies:
-      prettier: 2.8.8
+      prettier: 3.0.0
     dev: true
 
   /@nodelib/fs.scandir/2.1.5:
@@ -4481,6 +4481,12 @@ packages:
   /prettier/2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
+    dev: true
+
+  /prettier/3.0.0:
+    resolution: {integrity: sha512-zBf5eHpwHOGPC47h0zrPyNn+eAEIdEzfywMoYn2XPi0P44Zp0tSq64rq0xAREh4auw2cJZHo9QUob+NqCQky4g==}
+    engines: {node: '>=14'}
     hasBin: true
     dev: true
 
