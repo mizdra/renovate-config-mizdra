@@ -7,4 +7,11 @@
       rangeStrategy: 'widen',
     },
   ],
+  packageRules: [
+    // 頻繁に PR が作られるのを防ぐために、major に限って PR を作るように
+    {
+      matchUpdateTypes: ['minor', 'patch'],
+      enabled: false,
+    },
+  ],
 }
