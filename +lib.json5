@@ -6,5 +6,10 @@
       matchUpdateTypes: ['minor', 'patch'],
       enabled: false,
     },
+    // GitHub の Automatically generated release notes に載せられるよう、専用のラベルを付与
+    {
+      matchDepTypes: ['dependencies', 'peerDependencies', 'engines'],
+      addLabels: ['Type: Dependencies'],
+    },
   ],
 }

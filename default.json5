@@ -18,7 +18,7 @@
   // `:prConcurrentLimit10` を使いたいため、`:prConcurrentLimit20` は無効化する
   ignorePresets: [':prConcurrentLimit20'],
   // renovate の PR を一覧しやすいようラベルを付けておく
-  labels: ['renovate', 'Type: Dependencies'],
+  labels: ['renovate'],
   postUpdateOptions: [
     // 1つのパッケージが複数バージョン存在すると、予期せぬことが発生しやすいので dedupe する
     'npmDedupe',
