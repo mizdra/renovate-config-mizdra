@@ -14,9 +14,6 @@
     ':separateMultipleMajorReleases',
     // `schedule` を JST に
     ':timezone(Asia/Tokyo)',
-    // peerDeps を更新する時は、バージョンの範囲を広げるようにする。
-    // 例: `"eslint": "^3.0.0"` の peerDeps があるリポジトリで、`eslint@4` が publish されたら、`"eslint": "^4.0.0"` ではなく `"eslint": "^3.0.0 || ^4.0.0"` みたいにする。
-    ':widenPeerDependencies',
   ],
   // `:prConcurrentLimit10` を使いたいため、`:prConcurrentLimit20` は無効化する
   ignorePresets: [':prConcurrentLimit20'],
