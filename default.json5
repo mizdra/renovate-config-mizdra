@@ -1,7 +1,7 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   extends: [
-    'config:base',
+    'config:recommended',
     // monorepo に属する依存関係は CHANGELOG が共有されていたり、同時に更新しないと壊れることが多いので、1 つのグループにまとめる
     'group:monorepos',
     // CI の無料枠を消費しすぎないよう、月に 1 回 発火するように
