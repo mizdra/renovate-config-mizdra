@@ -1,13 +1,6 @@
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
   packageRules: [
-    // ライブラリでは engines field を互換性を保ったままにする
-    {
-      matchDepTypes: ['engines'],
-      rangeStrategy: 'widen',
-    },
-  ],
-  packageRules: [
     // 頻繁に PR が作られるのを防ぐために、major に限って PR を作るように
     {
       matchUpdateTypes: ['minor', 'patch'],

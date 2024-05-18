@@ -39,13 +39,7 @@
     // 本番で利用されるものは安全側に倒して minor 以下で automerge を有効化する
     {
       matchUpdateTypes: ['minor', 'patch'],
-      matchDepTypes: [
-        'dependencies',
-        'optionalDependencies',
-        'engines',
-        // peerDeps は major 単位で更新するようになっていて、そもそも minor 以下の PR が作られないので除外する
-        // 'peerDependencies',
-      ],
+      matchDepTypes: ['dependencies', 'optionalDependencies'],
       automerge: true,
     },
   ],
