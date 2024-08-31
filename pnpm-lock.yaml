@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@mizdra/prettier-config-mizdra':
-    specifier: ^1.0.0
-    version: 1.0.0(prettier@3.0.3)
+    specifier: ^2.0.0
+    version: 2.0.0(prettier@3.0.3)
   npm-run-all:
     specifier: ^4.1.5
     version: 4.1.5
@@ -1017,10 +1017,10 @@ packages:
     resolution: {integrity: sha512-GaHYm+c0O9MjZRu0ongGBRbinu8gVAMd2UZjji6jVmqKtZluZnptXGWhz1E8j8D2HJ3f/yMxKAUC0b+57wncIw==}
     dev: true
 
-  /@mizdra/prettier-config-mizdra@1.0.0(prettier@3.0.3):
-    resolution: {integrity: sha512-XukmUe7FrXEGnL1efi1H6oTY/GuCcjt3oA5tblia/kYmTqJ3Ciqz/3WN57liv0TDZC2aKNMQ3f0Bxp0rUEJCXA==}
+  /@mizdra/prettier-config-mizdra@2.0.0(prettier@3.0.3):
+    resolution: {integrity: sha512-Enj048mG2xdX/fuDEsh7VljvzQODG/6ItAzcfaDa6EMtXdTqoweY9uidhb5Ma1cBgjeguO3HazN703MzlzpEFQ==}
     peerDependencies:
-      prettier: '>=2.4.0'
+      prettier: '>=3.0.0'
     dependencies:
       prettier: 3.0.3
     dev: true
@@ -2188,6 +2188,7 @@ packages:
   /agent-base@7.1.0:
     resolution: {integrity: sha512-o/zjMZRhJxny7OyEF+Op8X+efiELC7k7yOjMzgfzVqOzXqkBkWI79YoTdOtsuWd5BWhAGAuOY/Xa6xpiaWXiNg==}
     engines: {node: '>= 14'}
+    requiresBuild: true
     dependencies:
       debug: 4.3.4
     transitivePeerDependencies:
